@@ -1,0 +1,55 @@
+#include<iostream>
+using namespace std;
+
+// Forward declaration of jain class
+class jain;
+
+class Ansha {
+private:
+    int c = 10;
+    friend void Anjali(Ansha, jain); // Declare Anjali as a friend function
+};
+
+class jain {
+private:
+    int a = 24;
+    friend void Anjali(Ansha, jain); // Declare Anjali as a friend function
+};
+
+// Function to perform the sum operation
+void Anjali(Ansha r1, jain r2) {
+    // Accessing private members through friend function is not recommended,
+    // but it's being done here for demonstration purposes.
+    cout << r1.c + r2.a  << endl; 
+}
+
+class student {
+public:
+int x=5;
+int y=6;
+    void print() {
+        cout << "She is very intelligent" << endl;
+    }
+};
+
+class multi : public student {
+public:
+    void sum (){
+        cout <<  x +  y << endl;
+    }
+};
+
+int main() {
+    Ansha a;
+    jain j;
+    multi m;
+
+    // Calling the Anjali function to demonstrate its usage
+    Anjali(a, j);
+    m.sum();
+    // Calling the sum function to demonstrate its usage
+    
+    
+    return 0;
+}
+    
