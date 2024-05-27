@@ -1,0 +1,51 @@
+#include <iostream>
+
+using namespace std;
+ 
+
+class befkubansha {
+
+public:
+
+    virtual void print() { cout << "aalsi insan" << endl; }
+ 
+
+    void show() { cout << "Queen of selfish people" << endl; }
+};
+ 
+
+class idiot: public befkubansha {
+
+public:
+
+    void print() { cout << "meri mazi" << endl; }
+ 
+
+    void show() { cout << "me hu ansha aur me hu" << endl; }
+};
+ 
+
+int main()
+{
+
+    befkubansha* m;
+
+    idiot i;
+
+    m= &i;
+ 
+
+    // Virtual function, binded at runtime
+
+    m->show();
+    
+ 
+
+    // Non-virtual function, binded at compile time
+
+    
+  m->print();
+ 
+
+    return 0;
+}
