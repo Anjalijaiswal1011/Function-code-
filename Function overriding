@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+class student {
+public:
+int a= 20; int b=40;
+public:
+    void print () {
+    int sum= a+b;
+        cout << sum << endl;
+    }
+    };
+    class Girl : public student {
+    int c= 12;
+    int d= 45;
+    
+    public:
+    void print () {
+      int  multi =  c * d;
+        cout << "The multiplication of " << c << "×" << d << " is " << multi << endl;
+    }
+};
+
+
+int main() {
+    Girl g;
+    
+    g.student ::print();
+    return 0;
+    }
