@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+
+class student {
+int a= 20; int b=40;
+public:
+    virtual void print () {
+    int sum= a+b;
+        cout << sum << endl;
+    }
+    void show () {
+    int c=45;
+    int d=43;
+      int  multi = c * d;
+        cout << "The multiplication of " << c << "×" << d << " is " << multi << endl;
+    }
+};
+class ansha : public student 
+
+{
+public:
+void print ()
+{
+cout << "hello" << endl;
+}
+void show ()
+{
+cout << "dumb" << endl;
+}
+};
+
+int main() {
+    student* y;
+    ansha a;
+    
+    
+    y=&a;
+    
+    
+    
+    
+    
+    y->print();
+    y->show();
+    return 0;
+    }
